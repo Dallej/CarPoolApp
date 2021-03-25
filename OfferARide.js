@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import {Text, View , Image, Button } from 'react-native';
+import styles from './style/style';
 
 export default function OfferARide() {
     return (
-        <div>
-            
-        </div>
+        <View style={styles.container}>
+        <View style={styles.main}>
+          <Text>This is adding ride page</Text>  
+
+
+        </View>
+  </View>
     )
 }
 

@@ -1,28 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import styles from './style/style'
+import {Text, View , Image, Button,Link } from 'react-native';
+import styles from './style/style';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <View>
-          <image src="./img/OAMKlogo"></image>
+        <View >
+        <Image source={require("./img/OAMKlogo.png")} style={styles.logo} />
         </View>
-
+        {/* <Link to="./Info" className="btn btn-primary">info</Link> */}
         <View>
-          <button onPress={() => navigation.navigate('Rides')}>
+          <Button style={styles.button} onPress={() => navigation.navigate('Rides')}>
             Rides
-          </button>
+          </Button>
         </View>
-        <button onPress={() => navigation.navigate('OfferARide')}>
+        <Button style={styles.button} onPress={() => navigation.navigate('OfferARide')}>
           Offer a ride +
-        </button>
+        </Button>
         <View>
-          <button onPress={() => navigation.navigate('Info')}>
+          <Button style={styles.button} onPress={() => navigation.navigate('Info')}>
             Instructions
-          </button>
+          </Button>
         </View>
       </View>
     </View>
